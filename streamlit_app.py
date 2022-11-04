@@ -38,7 +38,7 @@ try:
     frufruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) #take the json version of the response and normalize it.
     streamlit.dataframe(fruityvice_normalized) #output it on the screen as a table
 
-except URLError as e
+except URLError as e:
     streamlit.error()
   
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
